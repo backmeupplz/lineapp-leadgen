@@ -1,0 +1,42 @@
+Html Webpack Plugin:
+<pre>
+  TypeError: /Users/nikitakolmogorov/code/lineapp-leadgen/views/index.pug:67
+      65|           div(class="b-header__text")
+      66|             h1(class="b-header__title") 
+    > 67|               | #{texts.header1} 
+      68|               span(class="italic-400") #{texts.header2}
+      69|               |  #{texts.header3} 
+      70|               span(class="italic-400") #{texts.header4}
+  Cannot read property 'header1' of undefined
+  
+  - index.pug:539 
+    /Users/nikitakolmogorov/code/lineapp-leadgen/views/index.pug:539:63
+  
+  - index.pug:701 template
+    /Users/nikitakolmogorov/code/lineapp-leadgen/views/index.pug:701:130
+  
+  - index.js:265 
+    [lineapp-leadgen]/[html-webpack-plugin]/index.js:265:16
+  
+  - util.js:16 tryCatcher
+    [lineapp-leadgen]/[bluebird]/js/release/util.js:16:23
+  
+  - promise.js:512 Promise._settlePromiseFromHandler
+    [lineapp-leadgen]/[bluebird]/js/release/promise.js:512:31
+  
+  - promise.js:569 Promise._settlePromise
+    [lineapp-leadgen]/[bluebird]/js/release/promise.js:569:18
+  
+  - promise.js:606 Promise._settlePromiseCtx
+    [lineapp-leadgen]/[bluebird]/js/release/promise.js:606:10
+  
+  - async.js:138 Async._drainQueue
+    [lineapp-leadgen]/[bluebird]/js/release/async.js:138:12
+  
+  - async.js:143 Async._drainQueues
+    [lineapp-leadgen]/[bluebird]/js/release/async.js:143:10
+  
+  - async.js:17 Immediate.Async.drainQueues [as _onImmediate]
+    [lineapp-leadgen]/[bluebird]/js/release/async.js:17:14
+  
+</pre>

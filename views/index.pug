@@ -1,0 +1,116 @@
+html(lang="en")
+  head
+    title LineApp
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no")
+    link(href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i|Noto+Sans:700" rel="stylesheet")
+    link(href="main.css" rel="stylesheet")
+    link(rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png")
+    link(rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png")
+    link(rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png")
+    link(rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png")
+    link(rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png")
+    link(rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png")
+    link(rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png")
+    link(rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png")
+    link(rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png")
+    link(rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-icon-192x192.png")
+    link(rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/assets/favicon-32x32.png")
+    link(rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/assets/favicon-96x96.png")
+    link(rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/assets/favicon-16x16.png")
+    link(rel="manifest" href="/assets/favicon/manifest.json")
+    meta(name="msapplication-TileColor" content="#ffffff")
+    meta(name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png")
+    meta(name="theme-color" content="#ffffff")
+    script.
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-43367175-17', 'auto', {'allowLinker': true});
+      ga('require', 'linker');
+      ga('linker:autoLink', ['liney.co', 'lineapp.co', 'lineapp.today'] );
+      ga('send', 'pageview');
+  body
+    script.
+      /* <![CDATA[ */
+      goog_snippet_vars = function() {
+        var w = window;
+        w.google_conversion_id = 982677039;
+        w.google_conversion_label = "1qQLCImciXIQr-zJ1AM";
+        w.google_remarketing_only = false;
+      }
+      goog_report_conversion = function(url) {
+        goog_snippet_vars();
+        window.google_conversion_format = "3";
+        var opt = new Object();
+        opt.onload_callback = function() {
+          if (typeof(url) != 'undefined') {
+            window.location = url;
+          }
+        }
+        var conv_handler = window['google_trackConversion'];
+        if (typeof(conv_handler) == 'function') {
+          conv_handler(opt);
+        }
+      }
+      /* ]]> */
+    script(type="text/javascript" src="//www.googleadservices.com/pagead/conversion_async.js")
+    header(class="b-header b-header_default-text")
+      hgroup(class="b-header__info" id="b-header__info")
+        div(class="promo b-shift")
+          div(class="b-logo")
+            img(src="/assets/img/logo.svg" class="b-logo__image")
+          div(class="b-header__text")
+            h1(class="b-header__title") 
+              | #{texts.header1} 
+              span(class="italic-400") #{texts.header2}
+              |  #{texts.header3} 
+              span(class="italic-400") #{texts.header4}
+              |  #{texts.header5}
+            h2(class="b-header__subtitle") 
+              | #{texts.header6} 
+              span(class="italic-400") #{texts.header7}
+    form(class="b-calculater")
+      div(class="b-calculater__wrapper") 
+        p(class="b-calculater__text")
+          | #{texts.pricing1} 
+          span(class="italic-bold") #{texts.pricing2}
+          |  #{texts.pricing3} <br/>
+          | #{texts.pricing4}<br/>
+          | #{texts.pricing5} 
+          span(class="italic-bold") #{texts.pricing6}
+          |  #{texts.pricing7}
+        div(class="b-calculater__wrapper-range" id="range-wrapper")
+          p(id="range-min" class="b-calculater__range-limit") 1
+          input(id="count-customers" type="range" name="range" min="1" step="1" value="50" class="b-calculater__range")
+          p(id="range-max" class="b-calculater__range-limit") 1
+        div(id="range-bubble" class="b-calculater__bubble" style="display: none") 0
+    section(class="b-price")
+      p(class="b-price__info")
+        | #{texts.pricing8}
+        span(class="b-price__value")
+          span(id="count-customers-value")
+        | #{texts.pricing9}
+        span(class="italic-bold") #{texts.pricing10}
+    section(class="b-email")
+      p(class="b-email__text")
+        | #{texts.email1} <br/>
+        | #{texts.email2}  
+        span(class="italic-bold") #{texts.email3}
+        | #{texts.email4}
+      form(class="b-email__form")
+        div(class="b-email__form_wrapper")
+          input(id="email_input" type="email" placeholder="my@email.com" class="b-email__input b-email__input_common")
+          button(id="send_email" type="button" class="b-email__button b-email__button_common" onclick="goog_report_conversion();") #{texts.submit}
+          button(id="send_email_done" type="button" class="b-email__button b-email__button_common hide" style='display: none') #{texts.done}
+          input(id='lang' type='hidden' value=texts.lang)
+      div(class='b-lang')
+        if texts.lang == 'ru'
+          a(href='/?lang=en' class="b-lang__link") English
+          a(href='/?lang=ru' class="b-lang__link b-lang__link_active") Русский
+        else
+          a(href='/?lang=en' class="b-lang__link b-lang__link_active") English
+          a(href='/?lang=ru' class="b-lang__link") Русский
+    script(src="main.js")

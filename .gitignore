@@ -1,0 +1,4 @@
+node_modules
+emails.txt
+yarn-error.log
+*.DS_Store
